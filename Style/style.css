@@ -28,8 +28,8 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1100px;
-    margin: 0 auto;
+    /* max-width: 1100px; */
+    margin: 0 50px;
     /* border: 2px solid red; */
 
 }
@@ -60,18 +60,18 @@ nav h3 {
     font-weight: 700;
 }
 
-/* journey section start */
+/* journey section start  */
 
 .journey-conatainer {
     display: flex;
-    max-width: 1100px;
-    margin: 50px auto;
-    border: 2px solid tomato;
+    /* max-width: 1100px; */
+    margin: 50px 50px;
+    /* border: 2px solid tomato; */
 }
 
 .journey-tittle {
     width: 50%;
-    border: 2px solid steelblue;
+    /* border: 2px solid steelblue; */
 }
 
 .journey-conatainer h1 {
@@ -89,41 +89,61 @@ nav h3 {
 .journey-img-container{
     display: block;
     margin: 0 auto;
-    background-image: url("/images/Circledesign.svg");
+    background-image: url("../images/Circledesign.svg");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: contain;
 }
 .journey-img-container img{
+    width: 77%;
+    display: block;
+    margin: 0 auto;
+
     
 }
+
 
 /* media query style */
 /* small devices */
 @media screen and (max-width: 576px) {
-
-   nav, nav>ul{
-    flex-direction: column;
+    nav{
+        margin: 0 20px;
+    }
     
-   }
-   nav>ul{
-    text-align: center;
-    padding-left: 0;
-   }
-   nav li{
-    margin-left: 0;
-   }
-   .journey-conatainer{
-    flex-direction: column-reverse;
+    nav, nav ul{
+        flex-direction: column;
+    }
+    nav ul{
+        padding-left: 0;
+        text-align: center;
+    }
+    nav li{
+        margin-left: 0;
+    }
+    .journey-conatainer{
+        width: 88%;
+        flex-direction: column-reverse;
+        margin: 20px 20px;
+    }
+    .journey-tittle{
+        padding-left: 5px;
+        width: 100%;
+    }
+    .journey-conatainer h1 {
+        font-size: 1.75rem;
+        text-align: center;
+    }
+    .journey-conatainer p{
+        font-size: 0.8rem;
+        text-align: center;
+    }
+    .journey-img-container img{
+        width: 60%;
+    }
+
     
-   }
+       
+    }
+  
 
-   .journey-img-container img{
-    width: 100%;
-
-   }
-   .journey-tittle{
-    width: 100%;
-   }
-}
 
