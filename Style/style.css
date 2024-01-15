@@ -1,27 +1,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
-*{
+* {
     font-family: 'Poppins', sans-serif;
 }
 
 
 /* shared style */
-nav h3, nav a{
+nav h3,
+nav a,
+.journey-conatainer h1,
+.journey-conatainer p {
     color: #3A3A3A;
 
 }
+
+.btn-primary {
+    border: none;
+    border-radius: 41px;
+    background: #E02C6D;
+    padding: 10px 24px;
+    color: #FFFFFF;
+    margin-top: 16px;
+}
+
 /* nav style start */
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 30px 50px;
+    max-width: 1100px;
+    margin: 0 auto;
+    /* border: 2px solid red; */
 
 }
 
 nav>ul {
     display: flex;
-    
+
 
 
 
@@ -39,7 +54,76 @@ nav li {
 nav a {
     text-decoration: none;
 }
-nav h3{
+
+nav h3 {
     font-size: 1.5rem;
     font-weight: 700;
 }
+
+/* journey section start */
+
+.journey-conatainer {
+    display: flex;
+    max-width: 1100px;
+    margin: 50px auto;
+    border: 2px solid tomato;
+}
+
+.journey-tittle {
+    width: 50%;
+    border: 2px solid steelblue;
+}
+
+.journey-conatainer h1 {
+    font-size: 3.25rem;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.journey-conatainer p {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+.journey-img-container{
+    display: block;
+    margin: 0 auto;
+    background-image: url("/images/Circledesign.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.journey-img-container img{
+    
+}
+
+/* media query style */
+/* small devices */
+@media screen and (max-width: 576px) {
+
+   nav, nav>ul{
+    flex-direction: column;
+    
+   }
+   nav>ul{
+    text-align: center;
+    padding-left: 0;
+   }
+   nav li{
+    margin-left: 0;
+   }
+   .journey-conatainer{
+    flex-direction: column-reverse;
+    
+   }
+
+   .journey-img-container img{
+    width: 100%;
+
+   }
+   .journey-tittle{
+    width: 100%;
+   }
+}
+
